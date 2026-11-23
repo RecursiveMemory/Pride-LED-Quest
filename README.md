@@ -1,5 +1,5 @@
-# Rainbow power LED magisk module
-Make your LED always rainbow when your device is awake
+# Pride power LED magisk module
+Set the power LED of the quest to an assortment of pride themed patterns
 
 ## Note: This module was designed for the Quest 1
 
