@@ -1,6 +1,6 @@
-id=rainbow
-name=Rainbow LED
-version=v1.0
+id=pridergbled
+name=Pride LEDs
+version=v0.5
 versionCode=1
-author=Mlsplays&FreeXR
-description=Rainbow LED no adb required!
+author=Mlsplays&FreeXR&RecursiveMemory
+description=Pride LEDs based off of Mlsplays "Rainbow LED" work. Use the magisk action button to change which flag you use.
