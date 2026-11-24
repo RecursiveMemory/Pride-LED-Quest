@@ -4,6 +4,12 @@ RED_LED="/sys/class/leds/red/brightness"
 GREEN_LED="/sys/class/leds/green/brightness"
 BLUE_LED="/sys/class/leds/blue/brightness"
 
+settingslocation="settings.ini"
+
+get_setting() {
+    setting=$( cat $settingslocation )
+}
+
 set_rgb() {
     echo "$1" > "$RED_LED" 2>/dev/null
     echo "$2" > "$GREEN_LED" 2>/dev/null
@@ -26,7 +32,15 @@ is_awake() {
 
 rgb_cycle() {
     while is_awake; do
+        if [ $setting = "pride" ]
+        set_rgb 255 0 255
+        else if [ $setting = "transgender" ]
+        set_rgb 255 255 0
+        else if [ $setting = "genderfluid" ]
+        set_rgb 70 70 70
+        else
         set_rgb 255 70 255
+        fi
         sleep 1
     done
 }
@@ -39,6 +53,7 @@ main_loop() {
 
     while true; do
         if is_awake; then
+            get_setting
             rgb_cycle
             set_rgb 0 0 0
         fi
